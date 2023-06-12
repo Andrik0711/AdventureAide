@@ -22,6 +22,9 @@
         <a href="https://tailwindcss.com/"
             class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">Documentación de Tailwind</a>
     </p>
+    <h1 class="text-3xl font-bold underline">
+        Agregamos algo para la rama Andrik
+    </h1>
 </body>
 
 </html>
