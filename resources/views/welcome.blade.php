@@ -16,7 +16,7 @@
         Hello world!
     </h1>
     <h1 class="text-3xl font-bold underline">
-        Espero que te guste Tailwind!
+        Espero que te guste Tailwind KENCY!
     </h1>
     <p>
         <a href="https://tailwindcss.com/"
