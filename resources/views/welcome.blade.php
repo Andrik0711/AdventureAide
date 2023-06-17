@@ -31,9 +31,9 @@
           </button>
         </div>
         <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-          <a class="px-4 py-2 mt-8 text-base font-bold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-black hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About Us</a>
-          <a class="px-4 py-2 mt-8 text-base font-bold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-black hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Precios</a>
-          <a class="px-4 py-2 mt-8 text-base font-bold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-black hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Aplicación</a>
+          <a class="px-4 py-2 mt-8 text-base font-bold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-black hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#aboutUs">About Us</a>
+          <a class="px-4 py-2 mt-8 text-base font-bold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-black hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#plans">Precios</a>
+          <a class="px-4 py-2 mt-8 text-base font-bold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-black md:mt-0 md:ml-4 hover:text-gray-900 focus:text-black hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#app">Aplicación</a>
           <!-- component -->
           <a href="#"
           class="group relative inline-block overflow-hidden px-4 py-2 rounded border border-black bg-black text-sm font-bold md:mt-0 md:ml-4 text-white hover:text-violet-600 focus:outline-none focus:ring active:bg-indigo-600 active:text-white">
@@ -104,7 +104,7 @@
     <div class="-mt-64 flex justify-start">
       <img class="rounded-lg object-cover overflow-hidden" src="https://i.pinimg.com/originals/fb/2a/8b/fb2a8bf9486dbcee1b88747d940838f5.jpg" />
     </div>
-    <div class="flex justify-start -mr-28 ml-28">
+    <div id="aboutUs" class="flex justify-start -mr-28 ml-28">
       <img class="w-2/3 h-2/3 object-cover rounded-lg overflow-hidden" src="https://www.milenio.com/uploads/media/2021/02/04/torre-eiffel-sutterstock_30_0_925_575.jpg" />
     </div>
     <div class="-translate-y-96 transform ml-28 -mr-28 p-16 shadow-xl rounded-xl overflow-hidden bg-white">
@@ -148,11 +148,11 @@
 
 <div class="container mx-auto antialiased text-gray-900 bg-white" x-data="setup()">
 
-<main class="mx-4 my-8">
+<main>
   <div class="text-center">
     <h1 class="mb-4 text-5xl font-bold md:text-3xl lg:text-4xl">
       
-      <span class="font-semibold">PLANES</span>
+      <span id="plans"class="font-semibold">PLANES</span>
     </h1>
     <p class="text-sm font-normal text-gray-400">
       See below our main three plans for your business, for your startup and agency.
@@ -275,7 +275,7 @@
 
 
 <!--DESCARGA LA APP-->
-<div class="w-full h-600px relative overflow-hidden py-4">
+<div id="app" class="w-full h-600px relative overflow-hidden py-4">
   <video class="w-full h-full object-cover" autoplay loop muted>
     <source src="{{ asset('images/app.mp4') }}" type="video/mp4">
     <!-- Agrega más etiquetas <source> para formatos de video adicionales -->
@@ -337,9 +337,9 @@
   <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
-      <img src="#" class="mr-5 h-6 sm:h-9" alt="logo" />
+      <img src="{{asset('images/logo.png')}}" class="mr-5 h-6 sm:h-9" alt="logo" />
         <p class="max-w-xs mt-4 text-sm text-gray-600">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium.
+          Síguenos en nuestras redes sociales.
         </p>
         <div class="flex mt-8 space-x-6 text-gray-600">
           <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
@@ -369,10 +369,10 @@
             Menú
           </p>
           <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-            <a class="hover:opacity-75" href> About Us </a>
-            <a class="hover:opacity-75" href> Precios </a>
-            <a class="hover:opacity-75" href> Aplicación </a>
-            <a class="hover:opacity-75" href> Log In </a>
+            <a class="hover:opacity-75" href="#aboutUs"> About Us </a>
+            <a class="hover:opacity-75" href="#plans"> Precios </a>
+            <a class="hover:opacity-75" href="#app"> Aplicación </a>
+            <a class="hover:opacity-75" href=""> Log In </a>
           </nav>
         </div>
         <div>

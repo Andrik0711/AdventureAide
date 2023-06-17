@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OnePageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+//Ruta para mostrar el about us de la one page
+Route::get('/aboutUs', [OnePageController::class, 'irALugarEspecifico']);
