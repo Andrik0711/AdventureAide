@@ -14,10 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+
+//Ruta para el login y registro
+Route::get('/login', function () {
     return view('autentication.login_user');
 });
 
 
+//Ruta para el about us
+Route::get('/', function () {
+    return view('welcome');
+});
+
 //Ruta para mostrar el about us de la one page
-Route::get('/aboutUs', [OnePageController::class, 'irALugarEspecifico']);
+// Route::get('/aboutUs', [OnePageController::class, 'irALugarEspecifico']);
