@@ -34,11 +34,11 @@
             <div class="user_options-forms" id="user_options-forms">
                 <div class="user_forms-login">
                     <h2 class="forms_title">Iniciar Sesión</h2>
-                    <form class="form_login" method="#" action="" novalidate>
+                    <form class="form_login" method="POST" action="{{route('login')}}" novalidate>
                         @csrf
                         <fieldset class="forms_fieldset">
                             <div class="forms_field">
-                                <input id="email-login" type="email" placeholder="Email" class="forms_field-input"
+                                <input id="email-login" type="email" name="email" placeholder="Email" class="forms_field-input"
                                     required autofocus />
                                 {{-- Mensaje de error --}}
                                 @error('email-login')
@@ -48,7 +48,7 @@
                                 @enderror
                             </div>
                             <div class="forms_field">
-                                <input id="password-login" type="password" placeholder="Password" class="forms_field-input"
+                                <input id="password-login" type="password" name="password" placeholder="Password" class="forms_field-input"
                                     required />
                                 {{-- Mensaje de error --}}
                                 @error('password-login')
@@ -68,15 +68,15 @@
                 </div>
                 <div class="user_forms-signup">
                     <h2 class="forms_title">Registro</h2>
-                    <form class="form_registro" method="#" action="" novalidate>
+                    <form class="form_registro" method="POST" action="{{route('register')}}" novalidate>
                         {{-- Directiva de seguridad --}}
                         @csrf
                         <fieldset class="forms_fieldset">
                             <div class="forms_field">
-                                <input id="full-name" type="text" placeholder="Full Name" class="forms_field-input"
+                                <input id="name" type="text" name="name" placeholder="Full Name" class="forms_field-input"
                                     required />
                                 {{-- Mensaje de error --}}
-                                @error('full-name')
+                                @error('name')
                                     <div class="alert alert-danger">
                                         {{ $message }}
                                     </div>
@@ -84,7 +84,7 @@
                             </div>
 
                             <div class="forms_field">
-                                <input id="email" type="email" placeholder="Email" class="forms_field-input"
+                                <input id="email" type="email" name="email" placeholder="Email" class="forms_field-input"
                                     required />
                                 {{-- Mensaje de error --}}
                                 @error('email')
@@ -94,7 +94,7 @@
                                 @enderror
                             </div>
                             <div class="forms_field">
-                                <input id="password-register" type="password" placeholder="Password"
+                                <input id="password-register" name="password" type="password" placeholder="Password"
                                     class="forms_field-input" required />
                                 {{-- Mensaje de error --}}
                                 @error('password-register')
