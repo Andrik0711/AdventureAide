@@ -24,10 +24,17 @@ Route::get('/login', function () {
 });
 
 
-//Ruta para el about us
-Route::get('/', function () {
-    return view('welcome');
-});
-
 //Ruta para mostrar el about us de la one page
-// Route::get('/aboutUs', [OnePageController::class, 'irALugarEspecifico']);
+Route::get('/aboutUs', [OnePageController::class, 'irALugarEspecifico'])->name('irALugarEspecifico');
+
+// Ruta para vista registro de usuarios
+Route::get('/register', [RegisterController::class, 'index'])->name('register');
+
+//Ruta para enviar datos al servidor
+Route::post('/register', [RegisterController::class, 'store']);
+
+//Ruta para login
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+
+//Ruta de validacion del login
+Route::post('/login', [LoginController::class, 'store']);
