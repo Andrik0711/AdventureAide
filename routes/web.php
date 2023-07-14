@@ -23,9 +23,14 @@ Route::get('/login', function () {
     return view('autentication.login_user');
 });
 
+//Ruta para el dashboard
+Route::get('/', function () {
+    return view('welcome');
+});
+
 
 //Ruta para mostrar el about us de la one page
-Route::get('/aboutUs', [OnePageController::class, 'irALugarEspecifico'])->name('irALugarEspecifico');
+// Route::get('/aboutUs', [OnePageController::class, 'irALugarEspecifico'])->name('irALugarEspecifico');
 
 // Ruta para vista registro de usuarios
 Route::get('/register', [RegisterController::class, 'index'])->name('register');

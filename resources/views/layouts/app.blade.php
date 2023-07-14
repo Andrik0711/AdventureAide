@@ -24,9 +24,7 @@
 
 
     {{-- Contenedor del body --}}
-    <main>
-        @yield('body')
-    </main>
+    @yield('body')
 
     {{-- Contenedor del footer --}}
     <footer>
