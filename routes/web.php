@@ -29,5 +29,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Ruta para mostrar el about us de la one page
-// Route::get('/aboutUs', [OnePageController::class, 'irALugarEspecifico']);
+//Ruta para el about us
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
+//Ruta para el about us
+Route::get('/form', function () {
+    return view('formViaje');
+});
+
+// Ruta para vista registro de usuarios
+Route::get('/register',[RegisterController::class,'index'])->name('register');
+
+//Ruta para enviar datos al servidor
+Route::post('/register',[RegisterController::class,'store']);
+
+//Ruta para login
+Route::get('/login',[LoginController::class,'index'])->name('login');
+
+//Ruta de validacion del login
+Route::post('/login',[LoginController::class,'store']);
