@@ -31,4 +31,13 @@ class LoginController extends Controller
         // Credenciales correctas
         return redirect()->route('dashboard', auth()->user());
     }
+
+    // Metodo para cerrar sesion
+    public function logout()
+    {
+        // Cerrar sesion
+        auth()->logout();
+        // Redireccionar a la vista de login
+        return redirect()->route('login');
+    }
 }
