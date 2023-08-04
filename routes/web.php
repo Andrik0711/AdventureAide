@@ -4,6 +4,7 @@ use App\Http\Controllers\OnePageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FormController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -30,13 +31,8 @@ Route::get('/', function () {
 });
 
 //Ruta para el about us
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
-//Ruta para el about us
-Route::get('/form', function () {
-    return view('formViaje');
+Route::get('/mostrarViaje', function () {
+    return view('mostrarViaje');
 });
 
 // Ruta para vista registro de usuarios
@@ -50,3 +46,9 @@ Route::get('/login',[LoginController::class,'index'])->name('login');
 
 //Ruta de validacion del login
 Route::post('/login',[LoginController::class,'store']);
+
+//Ruta mostrar el dashboard
+Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
+
+//Ruta mostrar cuestionario para trazar el viaje
+Route::get('/form',[FormController::class,'index'])->name('form');

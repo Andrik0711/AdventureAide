@@ -45,14 +45,14 @@
 
             <!-- Links Section -->
             <div class="items-center hidden space-x-8 lg:flex">
-                <a class="flex text-gray-600 hover:text-blue-500
+                <a href="{{route ('dashboard')}}" class="flex text-gray-600 hover:text-blue-500
                     cursor-pointer transition-colors duration-300">
                     Home
                 </a>
 
                 <a class="flex text-gray-600 
                     cursor-pointer transition-colors duration-300
-                    font-semibold text-blue-600">
+                    font-semibold text-blue-600" href="{{route ('form')}}">
                     Trazar Viaje
                 </a>
 
@@ -152,66 +152,66 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script>
       var cont=0;
-    function loopSlider(){
-    var xx= setInterval(function(){
-          switch(cont)
-          {
-          case 0:{
-              $("#slider-1").fadeOut(400);
-              $("#slider-2").delay(400).fadeIn(400);
-              $("#sButton1").removeClass("bg-purple-800");
-              $("#sButton2").addClass("bg-purple-800");
-          cont=1;
-          
-          break;
-          }
-          case 1:
-          {
-          
-              $("#slider-2").fadeOut(400);
-              $("#slider-1").delay(400).fadeIn(400);
-              $("#sButton2").removeClass("bg-purple-800");
-              $("#sButton1").addClass("bg-purple-800");
-             
-          cont=0;
-          
-          break;
-          }
-               
-          }},8000);
-    
-    }
-    
-    function reinitLoop(time){
-    clearInterval(xx);
-    setTimeout(loopSlider(),time);
-    }
-    
-      $(window).ready(function(){
-          $("#slider-2").hide();
-          $("#sButton1").addClass("bg-purple-800");   
-    
-          loopSlider();
-       
-      });
-    
-    </script>
-    <script>
-        const appData = () => {
-            return {
-                percent: 0,
-    
-                appInit() {
-                    // source: https://codepen.io/A_kamel/pen/qBmmGKJ
-                    window.addEventListener('scroll', () => {
-                        let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
-                            height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    
-                        this.percent = Math.round((winScroll / height) * 100);
-                    });
-                },
+        function loopSlider(){
+        var xx= setInterval(function(){
+            switch(cont)
+            {
+            case 0:{
+                $("#slider-1").fadeOut(400);
+                $("#slider-2").delay(400).fadeIn(400);
+                $("#sButton1").removeClass("bg-purple-800");
+                $("#sButton2").addClass("bg-purple-800");
+            cont=1;
+            
+            break;
+            }
+            case 1:
+            {
+            
+                $("#slider-2").fadeOut(400);
+                $("#slider-1").delay(400).fadeIn(400);
+                $("#sButton2").removeClass("bg-purple-800");
+                $("#sButton1").addClass("bg-purple-800");
+                
+            cont=0;
+            
+            break;
+            }
+                
+            }},8000);
+        
+        }
+        
+        function reinitLoop(time){
+        clearInterval(xx);
+        setTimeout(loopSlider(),time);
+        }
+        
+        $(window).ready(function(){
+            $("#slider-2").hide();
+            $("#sButton1").addClass("bg-purple-800");   
+        
+            loopSlider();
+        
+        });
+        
+        </script>
+        <script>
+            const appData = () => {
+                return {
+                    percent: 0,
+        
+                    appInit() {
+                        // source: https://codepen.io/A_kamel/pen/qBmmGKJ
+                        window.addEventListener('scroll', () => {
+                            let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
+                                height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        
+                            this.percent = Math.round((winScroll / height) * 100);
+                        });
+                    },
+                };
             };
-        };
     </script>
     <!--JAVASCRIPT DE LOS BLADE-->
     @stack('scripts')
