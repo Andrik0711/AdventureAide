@@ -17,7 +17,7 @@ button {
 }
 
 input {
-    background-color: transparent;
+    background-color: #fff;
     padding: 0;
     border: 0;
     outline: 0;
@@ -94,7 +94,7 @@ input::placeholder {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background-color: rgba(34, 34, 34, 0.85);
+    background-color: rgba(11, 225, 84, 0.85);
     border-radius: 3px;
 }
 
@@ -105,7 +105,7 @@ input::placeholder {
 .user_options-unregistered {
     width: 50%;
     padding: 75px 45px;
-    color: #fff;
+    color: #000000;
     font-weight: 300;
 }
 
@@ -125,10 +125,10 @@ input::placeholder {
 .user_registered-login,
 .user_unregistered-signup {
     margin-top: 30px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 3px;
     padding: 10px 30px;
-    color: #fff;
+    color: #000000;
     text-transform: uppercase;
     line-height: 1em;
     letter-spacing: 0.2rem;
@@ -149,7 +149,7 @@ input::placeholder {
     left: 30px;
     width: calc(50% - 30px);
     min-height: 420px;
-    background-color: #fff;
+    background-color: #2adce1;
     border-radius: 3px;
     box-shadow: 2px 0 15px rgba(0, 0, 0, 0.25);
     overflow: hidden;
@@ -165,7 +165,7 @@ input::placeholder {
     font-weight: 500;
     line-height: 1em;
     text-transform: uppercase;
-    color: #e8716d;
+    color: #000000;
     letter-spacing: 0.1rem;
 }
 .user_options-forms .forms_field:not(:last-of-type) {
@@ -202,7 +202,7 @@ input::placeholder {
     color: #b3b3b3;
 }
 .user_options-forms .forms_buttons-action {
-    background-color: #e8716d;
+    background-color: #000000;
     border-radius: 3px;
     padding: 10px 35px;
     font-size: 1rem;
@@ -214,7 +214,7 @@ input::placeholder {
     transition: background-color 0.2s ease-in-out;
 }
 .user_options-forms .forms_buttons-action:hover {
-    background-color: #e14641;
+    background-color: #6b6b6b;
 }
 .user_options-forms .user_forms-signup,
 .user_options-forms .user_forms-login {
