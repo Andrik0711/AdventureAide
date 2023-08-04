@@ -22,10 +22,11 @@
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="cantidad-personas">Con quién viajas</label>
                         <select class="mb-5 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm">
                             <option value="" disabled selected>Selecciona una opción</option>
-                            <option value="familia">Viaje familiar</option>
-                            <option value="amigos">Viaje con amigos</option>
-                            <option value="solo">Viaje solitario</option>
-                            <option value="trabajo">Viaje de trabajo</option>
+                            <option value="familia">Familia</option>
+                            <option value="pareja">Pareja</option>
+                            <option value="amigos">Amigos</option>
+                            <option value="solo">Solo</option>
+                            <option value="trabajo">Compañeros de trabajo</option>
                         </select>
                     </div>
                     <div class="mb-10">
@@ -37,25 +38,82 @@
             <div class="step step-2 hidden">
                 <div class="rounded-md shadow-sm -space-y-px mb-10">
                     <div>
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="cantidad-personas">Selecciona el tipo de viaje</label>
-                        <select class="mb-5 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm">
-                            <option value="" disabled selected>Selecciona una opción</option>
-                            <option value="familia">Aventurero</option>
-                            <option value="amigos">Viaje con amigos</option>
-                            <option value="solo">Viaje solitario</option>
-                            <option value="trabajo">Viaje de trabajo</option>
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="tipo-viaje">Tipos de Viaje</label>
+                        <select class="mb-5 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" id="tipo-viaje">
+                          <option value="" disabled selected>Selecciona una opción</option>
+                          <option value="placer">Viaje de placer o turismo</option>
+                          <option value="negocios">Viaje de negocios</option>
+                          <option value="mochilero">Viaje de mochilero</option>
+                          <option value="luna-miel">Viaje de luna de miel</option>
+                          <option value="estudio">Viaje de estudio o intercambio</option>
+                          <option value="crucero">Viaje de crucero</option>
+                          <option value="aventura">Viaje de aventura</option>
+                          <option value="gastronomico">Viaje gastronómico</option>
+                          <option value="religioso">Viaje religioso o de peregrinación</option>
+                          <option value="voluntariado">Viaje de voluntariado</option>
+                          <option value="retiro-espiritual">Viaje de retiro espiritual o de bienestar</option>
+                          <option value="crucero-fluvial">Viaje de crucero fluvial</option>
+                          <option value="naturaleza">Viaje de naturaleza o ecoturismo</option>
                         </select>
-                    </div>
+                      </div>
+                      
                     <div>
-                      <label class="block text-gray-700 text-sm font-bold mb-2" for="cantidad-personas">Lugares que prefieres</label>
+                      <label class="block text-gray-700 text-sm font-bold mb-2" for="cantidad-personas">Lugar de hospedaje preferido</label>
                       <select class="mb-5 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm">
                           <option value="" disabled selected>Selecciona una opción</option>
-                          <option value="familia">Aventurero</option>
-                          <option value="amigos">Viaje con amigos</option>
-                          <option value="solo">Viaje solitario</option>
-                          <option value="trabajo">Viaje de trabajo</option>
+                          <option value="hotel">Hotel</option>
+                          <option value="hostal">Hostal</option>
+                          <option value="resort">Resort</option>
+                          <option value="alquilar">Alquileres vacionales(Airbnb)</option>
                       </select>
-                  </div>
+                    </div>
+                </div>
+            </div>
+            <div class="step step-3 hidden">
+                <div class="rounded-md shadow-sm -space-y-px mb-10">
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="tipo-viaje">Actividades Preferenciales</label>
+                        <select class="mb-5 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" id="tipo-viaje">
+                          <option value="" disabled selected>Selecciona una opción</option>
+                          <option value="opciones-familiares">Opciones familiares</option>
+                          <option value="aire-libre">Aventuras al aire libre</option>
+                          <option value="tour-gastronomico">Tours gastronómicos</option>
+                          <option value="atracciones-turisticas">Atracciones turísticas</option>
+                          <option value="museos-arte">Museos y arte</option>
+                          <option value="discotecas">Discotecas</option>
+                        </select>
+                    </div>
+                      
+                    <div class="mb-10">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="cantidad-personas">Establece el presupuesto</label>
+                        <input type="number" id="cantidad-personas" name="cantidad-personas" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" placeholder="Ingresa la cantidad de personas" min="1" max="10">
+                    </div>
+
+                </div>
+            </div>
+            <div class="step step-4 hidden">
+                <div class="space-y-px mb-10">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="cantidad-personas">Selecciona fecha de inicio</label>
+                    <div>
+                        </label>
+                        <input
+                        type="date"
+                        name="fecha-inicio"
+                        id="fecha-inicio"
+                        class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm focus:border-[#6A64F1] focus:shadow-md"
+                        />
+                    </div>
+                        
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="cantidad-personas">Selecciona fecha de fin</label>
+                    <div>
+                        </label>
+                        <input
+                        type="date"
+                        name="fecha-fin"
+                        id="fecha-fin"
+                        class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm focus:border-[#6A64F1] focus:shadow-md"
+                        />
+                    </div>
                 </div>
             </div>
 

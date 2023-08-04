@@ -29,6 +29,6 @@ class LoginController extends Controller
             return back()->with('mensaje', 'Credenciales incorrectas');
         }
         // Credenciales correctas
-        return view('profile.profile');
+        return redirect()->route('dashboard', auth()->user());
     }
 }

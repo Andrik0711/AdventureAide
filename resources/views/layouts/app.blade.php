@@ -46,16 +46,16 @@
 
                 <!-- Links Section -->
                 <div class="items-center hidden space-x-8 lg:flex">
-                    <a
+                    <a href="{{ route('dashboard') }}"
                         class="flex text-gray-600 hover:text-blue-500
                     cursor-pointer transition-colors duration-300">
                         Home
                     </a>
 
-                    <a
-                        class="flex text-gray-600 
+                    <a class="flex text-gray-600 
                     cursor-pointer transition-colors duration-300
-                    font-semibold text-blue-600">
+                    font-semibold text-blue-600"
+                        href="{{ route('form') }}">
                         Trazar Viaje
                     </a>
 
