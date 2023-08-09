@@ -42,6 +42,6 @@ class RegisterController extends Controller
         }
 
         // Redireccionando
-        return redirect()->route('login');
+        return redirect()->route('user-preferences.create');
     }
 }

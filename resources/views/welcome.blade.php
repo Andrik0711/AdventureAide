@@ -417,9 +417,32 @@
                 </div>
             </div>
         </div>
-        <p class="mt-8 text-xs text-gray-800">
-            2023 AdventureAide © All rights reserved.
-        </p>
+      </div>
+      <div class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <p class="font-medium">
+            Menú
+          </p>
+          <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+            <a class="hover:opacity-75" href="#aboutUs"> About Us </a>
+            <a class="hover:opacity-75" href="#plans"> Precios </a>
+            <a class="hover:opacity-75" href="#app"> Aplicación </a>
+            <a class="hover:opacity-75" href=""> Log In </a>
+            <a class="hover:opacity-75" href="{{route('user-preferences.create')}}"> preferencias </a>
+          </nav>
+        </div>
+        <div>
+          <p class="font-medium">
+            Legal
+          </p>
+          <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+            <a class="hover:opacity-75" href> Privacy Policy </a>
+            <a class="hover:opacity-75" href> Terms &amp; Conditions </a>
+            <a class="hover:opacity-75" href> Returns Policy </a>
+            <a class="hover:opacity-75" href> Accessibility </a>
+          </nav>
+        </div>
+      </div>
     </div>
 </footer>
 

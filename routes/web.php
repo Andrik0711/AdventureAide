@@ -7,6 +7,7 @@ use App\Http\Controllers\OnePageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserPreferenceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,26 +46,4 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 //Ruta de validacion del login
-Route::post('/login', [LoginController::class, 'store']);
-
-//Ruta mostrar el dashboard
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-//Ruta mostrar cuestionario para trazar el viaje
-Route::get('/form', [FormController::class, 'index'])->name('form');
-
-//Ruta mostrar el dashboard
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-//Ruta mostrar cuestionario para trazar el viaje
-Route::get('/form', [FormController::class, 'index'])->name('form');
-
-// Ruta para mostrar el perfil del usario
-Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
-
-// Ruta para actualizar los datos del perfil del usuario
-Route::put('/profile/{id}', [ProfileController::class, 'actualizar'])->name('profile.update');
-
-
-// Ruta para cerrar sesion
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::post('/login',[LoginController::class,'store']);
