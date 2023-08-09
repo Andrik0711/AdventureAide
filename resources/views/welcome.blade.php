@@ -402,7 +402,8 @@
                         <a class="hover:opacity-75" href="#plans"> Precios </a>
                         <a class="hover:opacity-75" href="#app"> Aplicación </a>
                         <a class="hover:opacity-75" href="#login"> Log In </a>
-                    </nav>
+                      <a class="hover:opacity-75" href="{{route('user-preferences.create')}}"> preferencias </a>
+          </nav>
                 </div>
                 <div>
                     <p class="font-medium">

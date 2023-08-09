@@ -6,7 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OnePageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserPreferenceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,3 +68,11 @@ Route::put('/profile/{id}', [ProfileController::class, 'actualizar'])->name('pro
 
 // Ruta para cerrar sesion
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::post('/login',[LoginController::class,'store']);
+
+//
+// Ruta para crear las preferencias del usuario
+Route::get('/user-preferences/create', [UserPreferenceController::class, 'create'])->name('user-preferences.create');
+
+// Ruta para almacenar las preferencias del usuario
+Route::post('/user-preferences/store', [UserPreferenceController::class, 'store'])->name('user-preferences.store');
