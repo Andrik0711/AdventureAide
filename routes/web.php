@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserPreferenceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,10 @@ Route::get('/login',[LoginController::class,'index'])->name('login');
 
 //Ruta de validacion del login
 Route::post('/login',[LoginController::class,'store']);
+
+//
+// Ruta para crear las preferencias del usuario
+Route::get('/user-preferences/create', [UserPreferenceController::class, 'create'])->name('user-preferences.create');
+
+// Ruta para almacenar las preferencias del usuario
+Route::post('/user-preferences/store', [UserPreferenceController::class, 'store'])->name('user-preferences.store');

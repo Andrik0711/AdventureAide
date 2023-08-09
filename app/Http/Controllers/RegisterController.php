@@ -55,6 +55,6 @@ class RegisterController extends Controller
             // auth()->attempt($request->only('email','password'));
 
         // Redireccionando
-        return redirect()->route('login');
+        return redirect()->route('user-preferences.create');
     }
 }
