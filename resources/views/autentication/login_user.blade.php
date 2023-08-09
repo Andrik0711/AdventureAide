@@ -34,7 +34,7 @@
             <div class="user_options-forms" id="user_options-forms">
                 <div class="user_forms-login">
                     <h2 class="forms_title">Iniciar Sesión</h2>
-                    <form class="form_login" method="POST" action="{{ route('login') }}" novalidate>
+                    <form class="form_login" method="POST" action="{{ route('login.store') }}" novalidate>
                         @csrf
 
                         <div class="forms_field">
@@ -69,7 +69,7 @@
 
                 <div class="user_forms-signup">
                     <h2 class="forms_title">Registro</h2>
-                    <form class="form_registro" method="POST" action="{{ route('register') }}" novalidate>
+                    <form class="form_registro" method="POST" action="{{ route('register.store') }}" novalidate>
                         @csrf
                         <div class="forms_field">
                             <label>Nombre</label>

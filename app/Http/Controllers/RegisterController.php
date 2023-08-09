@@ -25,7 +25,7 @@ class RegisterController extends Controller
         $this->validate($request, [
             'name' => 'required|min:5',
             'email' => 'required|unique:users|email|max:60',
-            'password' => 'required', //confirmed hace que se tenga que confirmar la contraseña de nuevo
+            'password' => 'required'
 
         ]);
 
@@ -40,6 +40,9 @@ class RegisterController extends Controller
         } catch (\Exception $e) {
             dd($e->getMessage());
         }
+
+        // Autenticar al usuario
+        auth()->attempt($request->only('email', 'password'));
 
         // Redireccionando
         return redirect()->route('user-preferences.create');

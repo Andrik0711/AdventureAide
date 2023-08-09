@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->boolean('has_allergies')->default(false);
             $table->string('allergy_type')->nullable();
-            $table->enum('diet_type', ['vegan', 'vegetarian', 'carnivore'])->nullable();
+            $table->string('diet_type')->nullable();
             $table->timestamps();
         });
     }

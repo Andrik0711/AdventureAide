@@ -48,4 +48,10 @@ class User extends Authenticatable
     protected $casts = [
         'password' => 'hashed',
     ];
+
+    // Relacion donde un usuarios debe tener sus preferencias
+    public function preferencias()
+    {
+        return $this->hasOne(UserPreference::class);
+    }
 }
