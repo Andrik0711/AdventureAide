@@ -6,7 +6,10 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OnePageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
+<<<<<<< HEAD
 use App\Http\Controllers\DashboardController;
+=======
+>>>>>>> yanel
 use App\Http\Controllers\UserPreferenceController;
 
 /*
@@ -46,4 +49,38 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 //Ruta de validacion del login
+<<<<<<< HEAD
 Route::post('/login',[LoginController::class,'store']);
+=======
+Route::post('/login', [LoginController::class, 'store']);
+
+//Ruta mostrar el dashboard
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+//Ruta mostrar cuestionario para trazar el viaje
+Route::get('/form', [FormController::class, 'index'])->name('form');
+
+//Ruta mostrar el dashboard
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+//Ruta mostrar cuestionario para trazar el viaje
+Route::get('/form', [FormController::class, 'index'])->name('form');
+
+// Ruta para mostrar el perfil del usario
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+
+// Ruta para actualizar los datos del perfil del usuario
+Route::put('/profile/{id}', [ProfileController::class, 'actualizar'])->name('profile.update');
+
+
+// Ruta para cerrar sesion
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::post('/login',[LoginController::class,'store']);
+
+//
+// Ruta para crear las preferencias del usuario
+Route::get('/user-preferences/create', [UserPreferenceController::class, 'create'])->name('user-preferences.create');
+
+// Ruta para almacenar las preferencias del usuario
+Route::post('/user-preferences/store', [UserPreferenceController::class, 'store'])->name('user-preferences.store');
+>>>>>>> yanel
