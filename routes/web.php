@@ -66,6 +66,9 @@ Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 // Ruta para actualizar los datos del perfil del usuario
 Route::put('/profile/{id}', [ProfileController::class, 'actualizar'])->name('profile.update');
 
+// Ruta para la imagen del perfil del usuario
+Route::post('/profile/image', [ProfileController::class, 'UsuarioImageStore'])->name('profile.imagen');
+
 // Ruta para cerrar sesion
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 

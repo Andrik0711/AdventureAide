@@ -6,6 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.css" />
 @endpush
 
 
@@ -74,8 +75,9 @@
                     class="w-full h-full rounded-tl-lg rounded-tr-lg">
             </div>
             <div class="flex flex-col items-center -mt-20">
-                <img src="https://vojislavd.com/ta-template-demo/assets/img/profile.jpg"
+                <img src="{{ asset('usuarios/' . $user->foto) }}" alt="Profile image"
                     class="w-40 border-4 border-white rounded-full">
+
                 <div class="flex items-center space-x-2 mt-2">
                     <p class="text-2xl">{{ $user->name }}</p>
                     <span class="bg-blue-500 rounded-full p-1" title="Verified">
@@ -164,68 +166,98 @@
                                     <input type="text" id="idioma" name="idioma" value="{{ $user->idioma }}">
                                 </span>
                             </li>
+
+                            {{-- Campo oculto para la imagen actual (si deseas mantener la imagen actual) --}}
+                            <input type="hidden" name="imagen_actual" value="{{ $user->foto }}" />
+
+                            {{-- Campo oculto para la imagen nueva --}}
+                            <div class="col-md-6">
+                                <input name="imagen" id="imagen" type="hidden" value="{{ old('value') }}" />
+                                @error('imagen')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
                         </ul>
                     </div>
 
                 </div>
-                <div class="flex flex-col w-full 2xl:w-2/3">
+
+                <div class="flex flex-col w-full 2xl:w-1/3">
                     <div class="flex-1 bg-white rounded-lg shadow-xl p-8">
                         <h4 class="text-xl text-gray-900 font-bold">About</h4>
                         <input type="text" id="about" name="about" value="{{ $user->descripcion }}">
                     </div>
-
                 </div>
-            </div>
-            <div class="flex-1 bg-white rounded-lg shadow-xl p-8">
-                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Actualizar
-                </button>
+
+                <div class="flex flex-col w-full 2xl:w-1/3">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        Actualizar
+                    </button>
+                </div>
             </div>
         </form>
 
+        <div class="bg-white rounded-lg shadow-xl pb-8">
+            <div class="w-full h-[250px]">
+                <form action="{{ route('profile.imagen') }}" method="POST" enctype="multipart/form-data"
+                    id="cargar_imagen"
+                    class="dropzone flex justify-center items-center p-8 border-2 border-dashed border-gray-400 rounded-lg">
+                    @csrf
+                </form>
+            </div>
+        </div>
     </div>
 @endsection
 
 
 @push('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.js"></script>
+
     <script>
-        const DATA_SET_VERTICAL_BAR_CHART_1 = [68.106, 26.762, 94.255, 72.021, 74.082, 64.923, 85.565, 32.432, 54.664,
-            87.654, 43.013, 91.443
-        ];
+        // Codigo para cargar Dropzone en la carpeta /categorias
+        Dropzone.autoDiscover = false;
+        // iniciarDropzoneCategorias();
+        const subir_imagen_categorias = new Dropzone('#cargar_imagen', {
+            dictDefaultMessage: 'Suba tú imagen aquí',
+            acceptedFiles: ".png,.jpg,.jpeg",
+            addRemoveLinks: true,
+            dictRemoveFile: "Borrar archivo",
+            maxFiles: 1,
+            uploadMultiple: false,
+            // Trabajando con imagen en el contenedor de dropzone
+            init: function() {
+                if (document.querySelector('[name= "imagen"]').value.trim()) {
+                    const imagenPublicada = {};
+                    imagenPublicada.size = 2000;
+                    imagenPublicada.name = document.querySelector('[name= "imagen"]').value;
+                    this.options.addedfile.call(this, imagenPublicada);
+                    this.options.thumbnail.call(
+                        this,
+                        imagenPublicada.name,
+                        `/usuarios/${imagenPublicada.name}`
+                    );
 
-        const labels_vertical_bar_chart = ['January', 'February', 'Mart', 'April', 'May', 'Jun', 'July', 'August',
-            'September', 'October', 'November', 'December'
-        ];
-
-        const dataVerticalBarChart = {
-            labels: labels_vertical_bar_chart,
-            datasets: [{
-                label: 'Revenue',
-                data: DATA_SET_VERTICAL_BAR_CHART_1,
-                borderColor: 'rgb(54, 162, 235)',
-                backgroundColor: 'rgba(54, 162, 235, 0.5)',
-            }]
-        };
-        const configVerticalBarChart = {
-            type: 'bar',
-            data: dataVerticalBarChart,
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                    title: {
-                        display: true,
-                        text: 'Last 12 Months'
-                    }
+                    imagenPublicada.previewElement.classList.add(
+                        "dz-sucess",
+                        "dz-complete"
+                    )
                 }
-            },
-        };
+            }
+        });
 
-        var verticalBarChart = new Chart(
-            document.getElementById('verticalBarChart'),
-            configVerticalBarChart
-        );
+        // Evento de envío de correo correcto
+        subir_imagen_categorias.on('success', function(file, response) {
+            document.querySelector('[name= "imagen"]').value = response.imagen;
+        });
+
+        // Envío cuando hay error
+        subir_imagen_categorias.on('error', function(file, message) {
+            console.log(message);
+        });
+
+        // Remover un archivo
+        subir_imagen_categorias.on('removedfile', function() {
+            document.querySelector('[name= "imagen"]').value = "";
+        });
     </script>
 @endpush
