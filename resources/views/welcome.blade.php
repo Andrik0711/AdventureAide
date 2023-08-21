@@ -173,7 +173,7 @@
                                 2M+
                             </p>
                             <p class="text-sm text-black">
-                                people in the Apple supply chain covered by our health and safety standards in 2020
+                                Viajeros satisfechos que han confiado en nosotros para planificar sus aventuras desde 2023.
                             </p>
                         </div>
                         <div>
@@ -181,8 +181,7 @@
                                 170+
                             </p>
                             <p class="text-sm text-black">
-                                member companies of the Responsible Business Alliance given access to our COVID response
-                                tools
+                                Destinos únicos y experiencias exclusivas disponibles solo para nuestros usuarios.
                             </p>
                         </div>
                     </div>
@@ -201,10 +200,10 @@
                         <span id="plans"class="font-semibold">PLANES</span>
                     </h1>
                     <p class="text-sm font-normal text-gray-400">
-                        See below our main three plans for your business, for your startup and agency.
+                        Descubre nuestros tres principales planes diseñados para adaptarse a cada tipo de viajero.
                     </p>
                     <p class="text-sm font-normal text-gray-400">
-                        It start from here! You can teach yourself what you really like.
+                        ¡Empieza tu aventura con nosotros! Personaliza tu experiencia de viaje a tu gusto y descubre el mundo a tu manera.
                     </p>
                 </div>
 
@@ -318,31 +317,47 @@
                     billPlan: 'monthly',
 
                     plans: [{
-                            name: 'Easy',
-                            discretion: 'All the basics for businesses that are just getting started.',
-                            price: {
-                                monthly: 29,
-                                annually: 29 * 12 - 199,
-                            },
-                            features: ['One project', 'Your dashboard'],
+                        name: 'Básico',
+                        discretion: 'Ideal para viajeros ocasionales que buscan herramientas esenciales.',
+                        price: {
+                            monthly: 9.99,
+                            annually: 99.99,
+                        },
+                        features: [
+                            'Planificación de itinerarios básicos',
+                            'Información sobre destinos populares',
+                            'Integración con mapas',
+                            'Gestión de gastos básica'
+                        ],
                         },
                         {
-                            name: 'Basic',
-                            discretion: 'Better for growing businesses that want more customers.',
+                            name: 'Premium',
+                            discretion: 'Perfecto para viajeros frecuentes que buscan una experiencia mejorada.',
                             price: {
-                                monthly: 59,
-                                annually: 59 * 12 - 100,
+                                monthly: 19.99,
+                                annually: 199.99,
                             },
-                            features: ['Two projects', 'Your dashboard', 'Components included', 'Advanced charts'],
+                            features: [
+                                'Todas las características del plan Básico',
+                                'Reseñas detalladas de otros viajeros',
+                                'Recomendaciones personalizadas de restaurantes y lugares de interés',
+                                'Alertas de seguridad en tiempo real'
+                            ],
                         },
                         {
-                            name: 'Custom',
-                            discretion: 'Advanced features for pros who need more customization.',
+                            name: 'Elite',
+                            discretion: 'Para viajeros serios que desean una experiencia de viaje sin igual.',
                             price: {
-                                monthly: 139,
-                                annually: 139 * 12 - 100,
+                                monthly: 29.99,
+                                annually: 299.99,
                             },
-                            features: ['Unlimited projects', 'Your dashboard', '+300 Components', 'Chat support'],
+                            features: [
+                                'Todas las características del plan Premium',
+                                'Acceso anticipado a nuevas características',
+                                'Soporte prioritario 24/7',
+                                'Ofertas exclusivas en alojamiento y actividades',
+                                'Integración con servicios de reserva de vuelos y hoteles'
+                            ],
                         },
                     ],
                 }

@@ -35,24 +35,20 @@
             <div class="relative overflow-hidden pb-60">
             <img
                 class="absolute h-full w-full object-cover object-center"
-                src="{{ asset('images/dashboard2.png') }}"
+                src="{{ asset('images/eiffel-tower.jpg') }}"
                 alt=""
             />
             </div>
             <div class="relative bg-blue-200">
             <div class="py-10 px-8">
-                <h3 class="text-2xl font-bold">Notepad</h3>
+                <h3 class="text-2xl font-bold">Torre Eiffel</h3>
                 <div class="text-gray-600 text-sm font-medium flex mb-4 mt-2">
-                <p>Provided by&nbsp;</p>
-                <a
-                    href="https://www.ls.graphics/"
-                    class="hover:text-black transition duration-300 ease-in-out"
-                    >LS Graphics</a
-                >
+                    <p>Ubicada en&nbsp;</p>
+                    <span>París, Francia</span>
                 </div>
                 <p class="leading-7">
-                High quality notepad mockup in a huge resolution and with
-                changeable everything.
+                    Un icónico monumento francés y una de las estructuras más reconocidas en el mundo. 
+                    La Torre Eiffel es un destino obligado para cualquier viajero en París.
                 </p>
                 <div class="mt-10 flex justify-between items-center">
                 <div>
@@ -72,24 +68,19 @@
             <div class="relative overflow-hidden pb-60">
             <img
                 class="absolute h-full w-full object-cover object-center"
-                src="{{ asset('images/dashboard3.png') }}"
+                src="{{ asset('images/grand-canyon-usa.jpg') }}"
                 alt=""
             />
             </div>
             <div class="relative bg-blue-200">
             <div class="py-10 px-8">
-                <h3 class="text-2xl font-bold">Notepad</h3>
+                <h3 class="text-2xl font-bold">Gran Cañón</h3>
                 <div class="text-gray-600 text-sm font-medium flex mb-4 mt-2">
-                <p>Provided by&nbsp;</p>
-                <a
-                    href="https://www.ls.graphics/"
-                    class="hover:text-black transition duration-300 ease-in-out"
-                    >LS Graphics</a
-                >
+                    <p>Ubicado en&nbsp;</p>
+                    <span>Arizona, EE.UU.</span>
                 </div>
                 <p class="leading-7">
-                High quality notepad mockup in a huge resolution and with
-                changeable everything.
+                    Una maravilla natural del mundo, el Gran Cañón ofrece vistas impresionantes y oportunidades para actividades al aire libre como senderismo y rafting.
                 </p>
                 <div class="mt-10 flex justify-between items-center">
                 <div>
@@ -109,24 +100,19 @@
             <div class="relative overflow-hidden pb-60">
             <img
                 class="absolute h-full w-full object-cover object-center"
-                src="{{ asset('images/dashboard4.png') }}"
+                src="{{ asset('images/giza-plateau-pyramids.jpg') }}"
                 alt=""
             />
             </div>
             <div class="relative bg-blue-200">
             <div class="py-10 px-8">
-                <h3 class="text-2xl font-bold">Notepad</h3>
+                <h3 class="text-2xl font-bold">Pirámides de Giza</h3>
                 <div class="text-gray-600 text-sm font-medium flex mb-4 mt-2">
-                <p>Provided by&nbsp;</p>
-                <a
-                    href="https://www.ls.graphics/"
-                    class="hover:text-black transition duration-300 ease-in-out"
-                    >LS Graphics</a
-                >
+                    <p>Ubicadas en&nbsp;</p>
+                    <span>Giza, Egipto</span>
                 </div>
                 <p class="leading-7">
-                High quality notepad mockup in a huge resolution and with
-                changeable everything.
+                    Las Pirámides de Giza son uno de los monumentos más antiguos y misteriosos del mundo. Estas estructuras milenarias son un testimonio del ingenio y la cultura del antiguo Egipto.
                 </p>
                 <div class="mt-10 flex justify-between items-center">
                 <div>
@@ -158,11 +144,11 @@
             <div
                 class="w-20 h-20 bg-yellow-500 flex justify-center items-center flex-col text-white font-bold text-center"
             >
-                <p class="text-2xl">14</p>
-                <p class="uppercase -mt-1">Jan</p>
+                <p class="text-2xl">21</p>
+                <p class="uppercase -mt-1">Ago</p>
             </div>
             <div class="bg-white h-20 flex-grow flex items-center px-4">
-                <p class="font-bold text-lg">Läxhjälp</p>
+                <p class="font-bold text-lg">Playa del Carmen, Quintana Roo</p>
             </div>
             </div>
         </div>
@@ -180,11 +166,11 @@
             <div
                 class="w-20 h-20 bg-yellow-500 flex justify-center items-center flex-col text-white font-bold text-center"
             >
-                <p class="text-2xl">14</p>
-                <p class="uppercase -mt-1">Jan</p>
+                <p class="text-2xl">05</p>
+                <p class="uppercase -mt-1">Sep</p>
             </div>
             <div class="bg-white h-20 flex-grow flex items-center px-4">
-                <p class="font-bold text-lg">Läxhjälp</p>
+                <p class="font-bold text-lg">Cabo San Lucas, Baja California Sur</p>
             </div>
             </div>
         </div>
@@ -213,11 +199,9 @@
             </svg>
         </div>
         <div class="flex-grow text-white">
-            <h2 class="text-xl title-font font-medium mb-3">Webdesign</h2>
+            <h2 class="text-xl title-font font-medium mb-3">Machu Picchu, Perú</h2>
             <p class="leading-relaxed text-sm text-justify">
-            Donner du goût ? de la couleur aux applications, je le fais afin de
-            rendre vos sites attrayants ?. Avant de devenir webdesigner, depuis
-            tout petit j'étais déjà familier à la couleur et du dessin.
+                Conocida como la "Ciudad Perdida de los Incas", Machu Picchu es una de las maravillas del mundo moderno. Situada en lo alto de las montañas de los Andes, ofrece vistas panorámicas y ruinas históricas que atraen a viajeros de todo el mundo. Es un testimonio del ingenio y la habilidad de la civilización inca.
             </p>
         </div>
         </div>
@@ -241,11 +225,9 @@
             </svg>
         </div>
         <div class="flex-grow text-white">
-            <h2 class="text-xl title-font font-medium mb-3">Webdesign</h2>
+            <h2 class="text-xl title-font font-medium mb-3">Santorini, Grecia</h2>
             <p class="leading-relaxed text-sm text-justify">
-            Donner du goût ? de la couleur aux applications, je le fais afin de
-            rendre vos sites attrayants ?. Avant de devenir webdesigner, depuis
-            tout petit j'étais déjà familier à la couleur et du dessin.
+                Santorini es famosa por sus impresionantes puestas de sol, sus casas blancas y sus iglesias de cúpulas azules. Es una isla volcánica en el mar Egeo que ofrece playas únicas con arena de colores y aguas cristalinas. Es el destino perfecto para una escapada romántica.
             </p>
         </div>
         </div>
@@ -269,11 +251,9 @@
             </svg>
         </div>
         <div class="flex-grow text-white">
-            <h2 class="text-xl title-font font-medium mb-3">Webdesign</h2>
+            <h2 class="text-xl title-font font-medium mb-3">Kyoto, Japón</h2>
             <p class="leading-relaxed text-sm text-justify">
-            Donner du goût ? de la couleur aux applications, je le fais afin de
-            rendre vos sites attrayants ?. Avant de devenir webdesigner, depuis
-            tout petit j'étais déjà familier à la couleur et du dessin.
+                Conocida como el corazón cultural de Japón, Kyoto alberga templos centenarios, santuarios y jardines tradicionales. Es una ciudad que combina lo antiguo con lo moderno, ofreciendo una experiencia única de la cultura y la historia japonesa. Durante la primavera, los cerezos en flor transforman la ciudad en un espectáculo visual.
             </p>
         </div>
         </div>
@@ -302,7 +282,7 @@
             </svg>
             </div>
             <div class="flex flex-col flex-grow ml-4">
-            <div class="text-sm text-gray-500">Users</div>
+            <div class="text-sm text-gray-500">Usuarios</div>
             <div class="font-bold text-lg">1259</div>
             </div>
         </div>
@@ -328,7 +308,7 @@
             </svg>
             </div>
             <div class="flex flex-col flex-grow ml-4">
-            <div class="text-sm text-gray-500">Orders</div>
+            <div class="text-sm text-gray-500">Viajes</div>
             <div class="font-bold text-lg">230</div>
             </div>
         </div>
@@ -354,7 +334,7 @@
             </svg>
             </div>
             <div class="flex flex-col flex-grow ml-4">
-            <div class="text-sm text-gray-500">New Clients</div>
+            <div class="text-sm text-gray-500">Clientes nuevos</div>
             <div class="font-bold text-lg">190</div>
             </div>
         </div>
@@ -380,7 +360,7 @@
             </svg>
             </div>
             <div class="flex flex-col flex-grow ml-4">
-            <div class="text-sm text-gray-500">Revenue</div>
+            <div class="text-sm text-gray-500">Gastos en vuelos</div>
             <div class="font-bold text-lg">$ 32k</div>
             </div>
         </div>
@@ -401,30 +381,10 @@
         </div>
         <div class="z-10 -mt-12 px-6 w-full">
             <div class="bg-white shadow-lg rounded-lg py-5 px-5">
-            <span class="font-bold text-gray-800 text-lg">Geek Pizza</span>
+            <span class="font-bold text-gray-800 text-lg">Vuelo a Cancún</span>
             <div class="flex items-center justify-between">
-                <div class="text-sm text-gray-600 font-light">Size : Regular</div>
-                <div class="text-2xl text-red-600 font-bold">$ 8.00</div>
-            </div>
-            </div>
-        </div>
-        </div>
-        <div class="flex flex-col items-center">
-        <div
-            class="bg-white overflow-hidden rounded-lg w-full relative pb-36"
-        >
-            <img
-            src="{{ asset('images/dashboard7.png') }}"
-            class="absolute h-full w-full object-cover object-center"
-            alt=""
-            />
-        </div>
-        <div class="z-10 -mt-12 px-6 w-full">
-            <div class="bg-white shadow-lg rounded-lg py-5 px-5">
-            <span class="font-bold text-gray-800 text-lg">Geek Pizza</span>
-            <div class="flex items-center justify-between">
-                <div class="text-sm text-gray-600 font-light">Size : Regular</div>
-                <div class="text-2xl text-red-600 font-bold">$ 8.00</div>
+                <div class="text-sm text-gray-600 font-light">Clase : Económica</div>
+                <div class="text-2xl text-red-600 font-bold">$ 250.00</div>
             </div>
             </div>
         </div>
@@ -441,10 +401,30 @@
         </div>
         <div class="z-10 -mt-12 px-6 w-full">
             <div class="bg-white shadow-lg rounded-lg py-5 px-5">
-            <span class="font-bold text-gray-800 text-lg">Geek Pizza</span>
+            <span class="font-bold text-gray-800 text-lg">Hotel en Playa del Carmen</span>
             <div class="flex items-center justify-between">
-                <div class="text-sm text-gray-600 font-light">Size : Regular</div>
-                <div class="text-2xl text-red-600 font-bold">$ 8.00</div>
+                <div class="text-sm text-gray-600 font-light">Habitación : Dobler</div>
+                <div class="text-2xl text-red-600 font-bold">$ 120.00</div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="flex flex-col items-center">
+        <div
+            class="bg-white overflow-hidden rounded-lg w-full relative pb-36"
+        >
+            <img
+            src="{{ asset('images/dashboard7.png') }}"
+            class="absolute h-full w-full object-cover object-center"
+            alt=""
+            />
+        </div>
+        <div class="z-10 -mt-12 px-6 w-full">
+            <div class="bg-white shadow-lg rounded-lg py-5 px-5">
+            <span class="font-bold text-gray-800 text-lg">Tour a Chichén Itzá</span>
+            <div class="flex items-center justify-between">
+                <div class="text-sm text-gray-600 font-light">Incluye : Transporte y guía</div>
+                <div class="text-2xl text-red-600 font-bold">$ 80.00</div>
             </div>
             </div>
         </div>
@@ -461,10 +441,10 @@
         </div>
         <div class="z-10 -mt-12 px-6 w-full">
             <div class="bg-white shadow-lg rounded-lg py-5 px-5">
-            <span class="font-bold text-gray-800 text-lg">Geek Pizza</span>
+            <span class="font-bold text-gray-800 text-lg">Alquiler de coche en Tulum</span>
             <div class="flex items-center justify-between">
-                <div class="text-sm text-gray-600 font-light">Size : Regular</div>
-                <div class="text-2xl text-red-600 font-bold">$ 8.00</div>
+                <div class="text-sm text-gray-600 font-light">Tipo : Compacto</div>
+                <div class="text-2xl text-red-600 font-bold">$ 45.00</div>
             </div>
             </div>
         </div>
@@ -496,12 +476,10 @@
                 Members only
             </p>
             <div class="text-black font-bold text-xl mb-2">
-                Can coffee make you a better developer?
+                5 consejos para viajar de forma sostenible
             </div>
             <p class="text-grey-darker text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
+                Viajar es una de las experiencias más enriquecedoras, pero también puede tener un impacto en el medio ambiente. Aprende cómo puedes hacer la diferencia con estos consejos.
             </p>
             </div>
             <div class="flex items-center">
@@ -540,12 +518,10 @@
                 Members only
             </p>
             <div class="text-black font-bold text-xl mb-2">
-                Can coffee make you a better developer?
+                ¿Cómo elegir el destino perfecto para tus próximas vacaciones?
             </div>
             <p class="text-grey-darker text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
+                Elegir el destino perfecto puede ser abrumador con tantas opciones disponibles. Descubre cómo identificar lugares que se alineen con tus intereses y presupuesto.
             </p>
             </div>
             <div class="flex items-center">

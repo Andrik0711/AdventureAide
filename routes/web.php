@@ -46,7 +46,7 @@ Route::post('/register', [RegisterController::class, 'store'])->name('register.s
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 //Ruta de validacion del login
-Route::post('/login', [LoginController::class, 'store']);
+Route::post('/login', [LoginController::class, 'store'])->name('login.store');
 
 //Ruta mostrar el dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
